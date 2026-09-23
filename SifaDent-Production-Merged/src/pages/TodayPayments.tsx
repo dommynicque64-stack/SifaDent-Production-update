@@ -3,7 +3,7 @@ import { Banknote, Plus, RefreshCw, Search } from 'lucide-react';
 import { apiFetch, formatKES, todayISO } from '../lib/helpers';
 import { Card, PageHeader, Btn, Field, Input, Select, Empty, Spinner } from '../components/ui';
 
-interface Payment { id:number; invoice_id:number; patient_id:number; amount:number; payment_method:string; payment_date:string; reference_number:string|null; notes?:string|null; }
+interface Payment { id:number; invoice_id:number; patient_id:number; amount:number; payment_method:string; payment_date:string; reference_number:string|null; notes?:string|null; received_by?:string|null; }
 interface AvailableInvoice { id:number; invoice_number:string; patient_id:number; patient_name:string; total_amount:number; amount_paid:number; balance:number; issue_date:string; status:string; }
 
 export default function TodayPayments() {
